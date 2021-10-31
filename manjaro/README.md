@@ -1,3 +1,12 @@
+INSTALAR
+
+sudo pacman qtile picom feh
+
+sudo pamac build google-chrome
+sudo pamac build spotify
+
+
+
 BLUETOOTH
 Revisar esta guía:
 https://wiki.archlinux.org/title/Bluetooth#Console
