@@ -1,9 +1,15 @@
 INSTALAR
 
-sudo pacman qtile picom feh
+sudo pacman qtile picom feh scrot xclip
 
 sudo pamac build google-chrome
 sudo pamac build spotify
+
+Si falla la instalación de Spotify, probar con el comando
+curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | gpg --import -
+antes de instalar. (si sigue fallando, probar con sudo)
+Si no ejecuta Spotify, probar con el comando
+spotify --no-zygote
 
 
 
