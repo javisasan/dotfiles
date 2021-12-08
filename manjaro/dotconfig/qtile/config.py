@@ -33,8 +33,8 @@ from libqtile.utils import guess_terminal
 
 import os
 
-#mod = "mod4" # Super
-mod = "mod1" # Alt
+mod = "mod4" # Super
+#mod = "mod1" # Alt
 
 terminal = guess_terminal()
 
@@ -99,10 +99,10 @@ keys = [
         desc="Spawn a command using a prompt widget"),
 
     # Browser - Firefox
-    Key([mod], "b", lazy.spawn("firefox")),
+    Key([mod, "shift"], "b", lazy.spawn("firefox")),
 
     # Browser - Chrome
-    Key([mod, "shift"], "b", lazy.spawn("google-chrome-stable")),
+    Key([mod], "b", lazy.spawn("google-chrome-stable")),
 
     # Menu Rofi
     Key([mod], "m", lazy.spawn("rofi -show drun")),
@@ -117,6 +117,9 @@ keys = [
     # PHPStorm
     Key([mod], "p", lazy.spawn("/opt/PhpStorm-212.5457.49/bin/phpstorm.sh")),
 
+    # DBeaver
+    Key([mod], "d", lazy.spawn("/opt/dbeaver/dbeaver")),
+
     # Scrot screenshot area to clipboard
     Key([mod], "s", lazy.spawn("scrot -s -e 'xclip -selection clipboard -target image/png -i $f'")),
 
@@ -126,6 +129,11 @@ keys = [
     # Volume
     Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%")),
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%")),
+
+    # Spotify
+    Key([], "XF86AudioPlay", lazy.spawn("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause")),
+    Key([], "XF86AudioNext", lazy.spawn("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next")),
+    Key([], "XF86AudioPrev", lazy.spawn("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous")),
 
     # Brightness
     Key([], "XF86MonBrightnessUp",   lazy.spawn("brightnessctl set +10%")),
@@ -246,7 +254,7 @@ wmname = "LG3D"
 autostart = [
     "xrandr --output LVDS-1 --right-of HDMI-1",
     "picom --no-vsync &",
-    "feh --bg-scale /home/javi/Imágenes/wallpapers/da3gtw8-87f1698b-36d1-4b1e-92d5-fe5f5a3017d9.jpg"
+    "feh --bg-scale /home/javi/Imágenes/wallpapers/sierra.jpg"
 ]
 
 for x in autostart:

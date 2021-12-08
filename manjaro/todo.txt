@@ -1,0 +1,69 @@
++ Estado de la batería
+- Tap para hacer click en el trackpad
++ Control de volumen
+- Salida del audio, altavoz o auriculares
+- % de CPU si es posible
+
+
+* Para el tema del touchpad, mirar este link:
+https://www.mail-archive.com/qtile-dev@googlegroups.com/msg01547.html
+
+* Para el tema del brillo, hay que instalar
+sudo pacman -S brightnessctl
+
+*** Esta web va muy bien
+https://github.com/antoniosarosi/dotfiles/blob/master/README.es.md
+
+Otra web interesante:
+https://www.sismonda.com.ar/730-2020-06-02-qtile-ubuntu-20-04-tiling-windows-manager-y-xrdp/
+
+*** VPN
+Para el tema de VPN, investigar un poco:
+https://wiki.archlinux.org/title/List_of_applications_(Espa%C3%B1ol)#Clientes_VPN
+
+OpenVPN está instalado
+
+Podemos ver el listado de conexiones con el comando:
+nmcli connection show
+
+Más info del comando nmcli, con el que parece que podemos levantar y cerrar la vpn si está configurada:
+https://askubuntu.com/questions/57339/connect-disconnect-from-vpn-from-the-command-line
+
+Igual esto funciona:
+
+sudo openvpn --config repositorios/escapada/aws/javier.sagra.ovpn --data-ciphers AES-256-CBC
+
+he tenido que editar el fichero y cambiar de 
+group nogroup
+a
+group nobody
+
+Tengo que leerme esto:
+https://openvpn.net/community-resources/how-to/
+
+al final, lo activo con esto:
+nmcli connection up javier.sagra
+
+
+BLUETOOTH
+Revisar esta guía:
+https://wiki.archlinux.org/title/Bluetooth#Console
+
+
+Para arrancar Docker, hay que tirar este comando:
+sudo systemctl start docker.service
+Pero si queremos que se ejecute siempre en el arranque, este otro:
+sudo systemctl enable docker.service
+
+Para arrancar SSH-AGENT en el startup, mirar:
+https://wiki.archlinux.org/title/SSH_keys_(Espa%C3%B1ol)#ssh-agent
+En definitiva, hay que añadir lo siguiente en .bashrc:
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent > ~/.ssh-agent-thing
+fi
+if [[ "$SSH_AGENT_PID" == "" ]]; then
+    eval "$(<~/.ssh-agent-thing)" > /dev/null
+fi
+Para añadir una clave SSH por defecto en el sistema, mirar:
+https://stackoverflow.com/questions/3466626/how-to-permanently-add-a-private-key-with-ssh-add-on-ubuntu
+
