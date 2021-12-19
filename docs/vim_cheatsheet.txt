@@ -1,0 +1,45 @@
+-----------------------------
+  MANUAL DE VIM
+-----------------------------
+
+# NAEGACIÓN
+
+gg - Ir al comienzo del fichero
+G  - Ir al final del fichero
+CTRL+G - Muestra la posición actual en el fichero
+Num + SHIFT+G - Ir a la línea *Num*
+
+# Borrado
+x  - Borra el carácter sobre el que estamos
+dw - Borra desde el cursor hasta el final de la palabra, espacio incluído
+de - Borra desde el cursor hasta el final de la palabra, sin incluír el espacio
+d$ - Borra desde el cursor hasta el final de la línea
+dd - Borra una línea entera
+5dw- Borra 5 palabras (también sirve d5w)
+
+# Inserción
+i - Inserta texto donde esté el cursor
+
+# Deshacer
+u - Deshace el último cambio
+U - Deshace todos los cambios en la línea
+CTRL+R - Deshace lo deshecho
+
+# PUT
+p - Añade lo último borrado después del cursor.
+    Si es una selección, lo pondrá después del cursor.
+    Si es una línea, la pondrá debajo del cursor.
+
+# REEMPLAZAR
+r - Reemplaza el carácter bajo el cursor por el tecleado.
+R - Pasamos a modo inserción y sobreescribimos más de un carácter
+
+# CAMBIAR
+cw  - Encima de un carácter de una palabra, borra desde ese carácter
+      hasta el final y entra en modo inserción para escribir
+5cw - Borra 5 palabras desde donde estemos y entra en modo insertar
+      (también sirve cw5)
+c$  - Borra hasta el final de la línea y entra en modo insertar
+
+
+
