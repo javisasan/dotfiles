@@ -1,0 +1,24 @@
+" Install plugins using Vim 8+ packages:
+" https://github.com/preservim/nerdtree  					-> NERDTree
+" https://github.com/itchyny/lightline.vim 					-> Statusline
+" https://github.com/maximbaz/lightline-ale
+" https://github.com/sheerun/vim-polyglot					-> Dev languages package
+
+set number
+set relativenumber
+set tabstop=4
+syntax on
+colorscheme desert
+set laststatus=2
+
+let mapleader = " "
+
+" Mappings
+
+" jj acts as Esc in Insert mode
+imap jj <Esc>
+
+" Shortcuts for NERDTree
+nmap <leader>nt :NERDTreeToggle<CR>
+nmap <leader>nf :NERDTreeFind<CR>
+
