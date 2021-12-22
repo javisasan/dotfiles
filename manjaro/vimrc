@@ -1,14 +1,21 @@
-" Install plugins using Vim 8+ packages:
+" Install plugins using Vim 8+ packages, for example:
+" git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
+"
+"" NERDTree
 " https://github.com/preservim/nerdtree  					-> NERDTree
+"
+"" Status line
 " https://github.com/itchyny/lightline.vim 					-> Statusline
 " https://github.com/maximbaz/lightline-ale
+"
+"
 " https://github.com/sheerun/vim-polyglot					-> Dev languages package
 
+syntax on
+colorscheme desert
 set number
 set relativenumber
 set tabstop=4
-syntax on
-colorscheme desert
 set laststatus=2
 
 let mapleader = " "
@@ -21,4 +28,8 @@ imap jj <Esc>
 " Shortcuts for NERDTree
 nmap <leader>nt :NERDTreeToggle<CR>
 nmap <leader>nf :NERDTreeFind<CR>
+nmap <leader>+ 10<C-w>>
+nmap <leader>- 10<C-w><
+
+
 
