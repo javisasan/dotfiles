@@ -37,21 +37,34 @@ Plug 'maximbaz/lightline-ale'
 " Code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Code completion through PHPActor
+"Plug 'ncm2/ncm2'
+"Plug 'roxma/nvim-yarp'
+"Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
+
 call plug#end()
 
 " Mappings
 
 " jj acts as Esc in Insert mode
 imap jj <Esc>
+" press "q" for closing file
+nmap <leader>q :q<CR>
 
 " Shortcuts for NERDTree
 nmap <leader>nt :NERDTreeToggle<CR>
 nmap <leader>nf :NERDTreeFind<CR>
 nmap <leader>+ 10<C-w><
 nmap <leader>- 10<C-w>>
+nmap <leader>h <C-w>h
+nmap <leader>l <C-w>l
 
 " Shortcuts for COC
 nmap <silent> gd <plug>(coc-definition)
 nmap <silent> gi <plug>(coc-implementation)
 
+" Shortcuts for PHPActor
+"nmap <leader>gd :PhpactorGotoDefinition<CR>
+"nmap <leader>gt :PhpactorGotoType<CR>
+"nmap <leader>gi :PhpactorGotoImplementation<CR>
 
