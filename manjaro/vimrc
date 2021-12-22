@@ -11,6 +11,9 @@
 "
 " https://github.com/sheerun/vim-polyglot					-> Dev languages package
 
+" -------
+
+
 syntax on
 colorscheme desert
 set number
@@ -20,6 +23,22 @@ set laststatus=2
 
 let mapleader = " "
 
+
+" Install plugins using Vim-Plug ( https://github.com/junegunn/vim-plug )
+call plug#begin('~/.vim/plugged')" 
+
+" NERDTree
+Plug 'scrooloose/nerdtree'
+
+" Status line
+Plug 'itchyny/lightline.vim'
+Plug 'maximbaz/lightline-ale'
+
+" Code completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+call plug#end()
+
 " Mappings
 
 " jj acts as Esc in Insert mode
@@ -28,8 +47,11 @@ imap jj <Esc>
 " Shortcuts for NERDTree
 nmap <leader>nt :NERDTreeToggle<CR>
 nmap <leader>nf :NERDTreeFind<CR>
-nmap <leader>+ 10<C-w>>
-nmap <leader>- 10<C-w><
+nmap <leader>+ 10<C-w><
+nmap <leader>- 10<C-w>>
 
+" Shortcuts for COC
+nmap <silent> gd <plug>(coc-definition)
+nmap <silent> gi <plug>(coc-implementation)
 
 
