@@ -1,7 +1,7 @@
 "" Install plugins using Vim-Plug ( https://github.com/junegunn/vim-plug )
 call plug#begin('~/.vim/plugged')" 
 " Theme
-"Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 "Plug 'shinchu/lightline-gruvbox.vim'
 " NERDTree
 Plug 'scrooloose/nerdtree'
@@ -14,11 +14,11 @@ call plug#end()
 
 let mapleader = " "
 syntax on
-colorscheme desert
-"let g:lightline = {}
-"let g:lightline.colorscheme = 'gruvbox'
-"let g:gruvbox_contrast_dark = "hard"
-"highlight Normal ctermbg=NONE
+colorscheme gruvbox
+set bg=dark
+" Comment / uncomment following line in order to set transparency
+highlight Normal ctermbg=NONE guibg=NONE
+let g:gruvbox_contrast_dark = "hard"
 set number
 set relativenumber
 set tabstop=4
