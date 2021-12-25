@@ -10,6 +10,15 @@ Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'
 " Code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Typing
+Plug 'jiangmiao/auto-pairs'
+Plug 'alvan/vim-closetag'
+" IDE
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'yggdroot/indentline'
+Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 let mapleader = " "
@@ -29,6 +38,7 @@ set cursorline
 nmap <leader>q :q<CR>
 nmap <leader>j 10j
 nmap <leader>k 10k
+nmap <leader>; $a;<Esc>
 
 "" Mappings - Insert Mode
 imap jj <Esc>
@@ -36,8 +46,8 @@ imap jj <Esc>
 "" Shortcuts for NERDTree
 nmap <leader>nt :NERDTreeToggle<CR>
 nmap <leader>nf :NERDTreeFind<CR>
-nmap <leader>+ 10<C-w><
-nmap <leader>- 10<C-w>>
+nmap <leader>+ 10<C-w>>
+nmap <leader>- 10<C-w><
 nmap <leader>h <C-w>h
 nmap <leader>l <C-w>l
 
@@ -45,4 +55,8 @@ nmap <leader>l <C-w>l
 nmap <silent> gd <plug>(coc-definition)
 nmap <silent> gi <plug>(coc-implementation)
 
+" Shorcuts for ZFZ
+nmap <leader>f :Files<CR>
 
+" Shortcuts for Easymotion
+nmap <leader>s <plug>(easymotion-s2)

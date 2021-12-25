@@ -41,7 +41,7 @@ nmap gl :action Forward<CR>
 
 " NERDTree - https://github.com/JetBrains/ideavim/wiki/NERDTree-support
 nmap <leader>nt :NERDTreeToggle<CR>
-nmap <leader>nf :NERDTreeFocus<CR>
+nmap <leader>nf :NERDTreeFind<CR>
 
 nmap <leader>h :action PreviousTab<CR>
 nmap <leader>l :action NextTab<CR>
