@@ -30,9 +30,10 @@ highlight Normal ctermbg=NONE guibg=NONE
 let g:gruvbox_contrast_dark = "hard"
 set number
 set relativenumber
-set tabstop=4
 set laststatus=2
 set cursorline
+" This line will apply indent as 4 spaces
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 "" Mappings - Normal Mode
 nmap <leader>q :q<CR>
@@ -60,3 +61,4 @@ nmap <leader>f :Files<CR>
 
 " Shortcuts for Easymotion
 nmap <leader>s <plug>(easymotion-s2)
+
