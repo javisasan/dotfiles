@@ -22,6 +22,7 @@ Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 let mapleader = " "
+
 syntax on
 colorscheme gruvbox
 set bg=dark
@@ -34,6 +35,10 @@ set laststatus=2
 set cursorline
 " This line will apply indent as 4 spaces
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+
+"" Default clipboard. Check https://vim.fandom.com/wiki/Accessing_the_system_clipboard
+"" If not working, on Gnome install vim-gnome; on Mint install vim-gtk3
+set clipboard=unnamedplus
 
 "" Mappings - Normal Mode
 nmap <leader>q :q<CR>

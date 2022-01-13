@@ -33,11 +33,11 @@ set NERDTree
 
 " Find more examples here: https://jb.gg/share-ideavimrc
 
-nmap gd :action GotoDefinition<CR>  "Default
-nmap gi :action GotoImplementation<CR>
-nmap gt :action GotoTest<CR>
-nmap gh :action Back<CR>
-nmap gl :action Forward<CR>
+nmap <leader>gd :action GotoDefinition<CR>  "Default
+nmap <leader>gi :action GotoImplementation<CR>
+nmap <leader>gt :action GotoTest<CR>
+nmap <leader>gh :action Back<CR>
+nmap <leader>gl :action Forward<CR>
 
 " NERDTree - https://github.com/JetBrains/ideavim/wiki/NERDTree-support
 nmap <leader>nt :NERDTreeToggle<CR>
@@ -46,5 +46,15 @@ nmap <leader>nf :NERDTreeFind<CR>
 nmap <leader>h :action PreviousTab<CR>
 nmap <leader>l :action NextTab<CR>
 
+"" Mappings - Normal Mode                                                                                          
+nmap <leader>q :q<CR>
+nmap <leader>j 10j
+nmap <leader>k 10k
+nmap <leader>; $a;<Esc>
+
+"" Mappings - Insert Mode
 imap jj <Esc>
+
+"" Default clipboard
+set clipboard+=unnamed
 
