@@ -8,4 +8,5 @@ Instalar la base de i3:
 
 sudo pacman -S i3 y elegir los programas de arriba.
 
+En Manjaro no sale el tray bar, pero para conectarnos a vpn podemos hacerlo por nmcli o lanzando "plasmashell"
 
