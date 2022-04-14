@@ -236,13 +236,9 @@ gaps outer 0
 gaps inner 10
 smart_gaps on
 
-# Execs - Wallpapers
-#exec_always feh --bg-fill /home/javi/Imágenes/Wallpapers/umbrella.jpg
-#exec_always feh --bg-fill /home/javi/Imágenes/Wallpapers/kyoto.jpg
-exec_always feh --bg-fill /home/javi/Imágenes/Wallpapers/KbBJ8GhP-wallha.com.jpg
-#exec_always feh --bg-fill /home/javi/Imágenes/Wallpapers/archasdf.jpg
-#exec_always feh --bg-fill /home/javi/Imágenes/Wallpapers/sgi-logo.jpg
-
-# More Execs
+# Execs
+exec_always feh --bg-fill /home/javi/Imágenes/Wallpapers/umbrella.jpg
 exec picom
+#exec xrandr --output DP-1 --right-of HDMI-2 --primary
+
 
