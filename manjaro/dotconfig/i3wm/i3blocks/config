@@ -75,6 +75,11 @@ signal=10
 color=#F79494
 #background=#F79494
 
+[battery]
+command=/home/javi/.config/i3blocks/batt.sh
+interval=60
+color=#00ff00
+#border=#00ff00
 
 # Update time every 5 seconds
 [time]
