@@ -43,6 +43,10 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+# Brightness control
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -62,6 +66,17 @@ bindsym $mod+d exec flatpak run io.dbeaver.DBeaverCommunity     # DBeaver
 bindsym $mod+ntilde exec redshift -O 3400                       # Redshift - Apply
 bindsym $mod+Shift+ntilde exec redshift -x                      # Redshift - Discard
 bindsym $mod+y exec gnome-screenshot -a                         # Make screenshot
+
+# LAUNCHING APPS - Manjaro laptop
+#bindsym $mod+b exec google-chrome-stable                        # Chrome
+#bindsym $mod+Shift+b exec firefox                               # Chrome
+#bindsym $mod+p exec /opt/PhpStorm-212.5457.49/bin/phpstorm.sh   # PHPStorm
+#bindsym $mod+Shift+m exec rofi -show run                        # Rofi - All
+#bindsym $mod+m exec rofi -show                                  # Rofi - Opened
+#bindsym $mod+d exec /opt/dbeaver/dbeaver                        # DBeaver
+#bindsym $mod+ntilde exec redshift -O 3400                       # Redshift - Apply
+#bindsym $mod+Shift+ntilde exec redshift -x                      # Redshift - Discard
+#bindsym --release $mod+y exec scrot -s -e 'xclip -selection clipboard -target image/png -i $f'        # Make screenshot
 
 # start dmenu (a program launcher)
 bindsym $mod+Shift+d exec dmenu_run
