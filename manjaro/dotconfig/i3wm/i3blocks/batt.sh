@@ -6,12 +6,19 @@
 
 # Battery 0: Discharging, 74%, 02:58:33 remaining
 # Battery 0: Charging, 74%, 02:55:14 until charged
+# Battery 0: Discharging, 0%, rate information unavailable
 
 command_output=$(acpi)
 #command_output="Battery 0: Charging, 11%, 02:55:14 until charged"
 #command_output="Battery 0: Dischanging, 12%, 02:55:14 until charged"
 
 percent=$(echo $command_output | awk -F ", " '{print $2}' | awk -F "%" '{print $1}')
+
+if [ ${percent} = 0 ]
+then
+    echo "<span color=\"#999999\">No Batt</span>"
+    exit 0
+fi;
 
 warning=""
 output="<span color=\"#00ff00\">${percent}%</span>"
