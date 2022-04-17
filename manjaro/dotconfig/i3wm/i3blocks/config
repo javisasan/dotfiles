@@ -33,32 +33,28 @@ markup=pango
 color=#eeeeee
 
 # From version 1.5, establish borders
-#border=#ff0000
+#border=#ff0000   <= Can be overriden for each block
 #border_top=0
 #border_bottom=1
 #border_left=0
 #border_right=0
+
+[spotify]
+command=/home/javi/.config/i3blocks/spotify
+interval=5
+color=#00ff00
 
 [caps]
 command=/home/javi/.config/i3blocks/caps.sh
 interval=1
 color=#ffffff
 signal=2
-#background=#9f5500
-#min_width=80
-
-[spotify]
-command=/home/javi/.config/i3blocks/spotify
-interval=5
-color=#00ff00
-#border=#00ff00
 
 # Guess the weather hourly
 [weather]
 command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
 interval=3600
 color=#A4C2F4
-#border=#A4C2F4
 
 [ip]
 command=/home/javi/.config/i3blocks/network.sh
@@ -71,19 +67,15 @@ label=♪
 interval=5
 signal=10
 color=#F79494
-#background=#F79494
 
 [battery]
 command=/home/javi/.config/i3blocks/batt.sh
 interval=60
 color=#00ff00
-#border=#00ff00
 
 # Update time every 5 seconds
 [time]
 command=date '+%a %Y.%m.%d %H:%M:%S'
 interval=5
 color=#eeeeee
-#border=#eeeeee
-
 
