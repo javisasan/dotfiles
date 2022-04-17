@@ -41,9 +41,10 @@ if [ "${percent}" -lt "15" ]
 then
     if [ "${discharging}" ]
     then
-        warning="<span background=\"#f74242\" color=\"#ffffff\"><b>Low Battery</b></span> "
+        warning="<span background=\"#f74242\" color=\"#333333\"><b> LOW BATTERY </b></span> "
     fi;
-    output="<span color=\"#F79494\">${percent}%</span>"
+    #output="<span color=\"#F79494\">${percent}%</span>"
+    output="<span color=\"#ff0000\">${percent}%</span>"
 fi;
 
 echo "${warning}${status_output}${output}"
