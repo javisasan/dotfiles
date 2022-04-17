@@ -11,7 +11,7 @@ then
     vpn_warning="<span background=\"#91E78B\" color=\"#ffffff\"><b>VPN</b></span> "
 fi;
 
-host=$(hostname -i | awk '{ print "IP:" $1 }')
+host=$(ip addr | grep 192 | awk '{print $2}' | sed "s/\/.*//g")
 
 echo "${vpn_warning}${host}"
 
