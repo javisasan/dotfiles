@@ -7,6 +7,15 @@
 
 * Para el tema del touchpad, mirar este link:
 https://www.mail-archive.com/qtile-dev@googlegroups.com/msg01547.html
+Básicamente vamos al fichero /usr/share/X11/xorg.conf.d/40-libinput.conf
+y añadimos la línea señalada:
+Section "InputClass"
+        Identifier "libinput touchpad catchall"
+        MatchIsTouchpad "on"
+        MatchDevicePath "/dev/input/event*"
+        Driver "libinput"
+        Option "Tapping" "on"  <=== Añadir esta linea
+EndSection
 
 * Para el tema del brillo, hay que instalar
 sudo pacman -S brightnessctl
@@ -25,6 +34,9 @@ OpenVPN está instalado
 
 Podemos ver el listado de conexiones con el comando:
 nmcli connection show
+
+Nos conectamos a la vpn:
+nmcli connection up javier.sagra
 
 Más info del comando nmcli, con el que parece que podemos levantar y cerrar la vpn si está configurada:
 https://askubuntu.com/questions/57339/connect-disconnect-from-vpn-from-the-command-line
