@@ -60,12 +60,10 @@ interval=3600
 color=#A4C2F4
 #border=#A4C2F4
 
-# Query my default IP address only on startup
 [ip]
-command=hostname -i | awk '{ print "IP:" $1 }'
-interval=once
+command=/home/javi/.config/i3blocks/network.sh
+interval=5
 color=#91E78B
-#border=#91E78B
 
 [volume]
 command=/home/javi/.config/i3blocks/volume
