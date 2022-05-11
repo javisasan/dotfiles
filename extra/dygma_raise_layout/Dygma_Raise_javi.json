@@ -311,19 +311,18 @@
       "extraLabel": "SHIFTTO"
     },
     {
-      "keyCode": 41,
-      "label": "ESC"
-    },
-    {
       "keyCode": 230,
       "label": "RIGHT ALT",
       "extraLabel": "",
       "verbose": "AltGr"
     },
     {
-      "keyCode": 17493,
-      "label": "1",
-      "extraLabel": "MOVE"
+      "keyCode": 41,
+      "label": "ESC"
+    },
+    {
+      "keyCode": 40,
+      "label": "ENTER"
     },
     {
       "keyCode": 42,
@@ -419,8 +418,8 @@
     4,
     5,
     1,
-    10,
     11,
+    10,
     4,
     4,
     4,
@@ -483,7 +482,7 @@
     4,
     4,
     4,
-    4
+    12
   ],
   "palette": [
     {

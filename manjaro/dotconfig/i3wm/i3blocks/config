@@ -52,9 +52,14 @@ signal=2
 
 # Guess the weather hourly
 [weather]
-command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
+#command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
+command=/home/javi/.config/i3blocks/weather.sh
 interval=3600
 color=#A4C2F4
+
+[wallpaper]
+command=/home/javi/.config/i3blocks/change_wallpaper.py
+interval=120
 
 [ip]
 command=/home/javi/.config/i3blocks/network.sh

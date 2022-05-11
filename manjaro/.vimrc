@@ -63,6 +63,7 @@ nmap <silent> gi <plug>(coc-implementation)
 
 " Shorcuts for ZFZ
 nmap <leader>f :Files<CR>
+nmap <leader>b :Buffers<CR>
 
 " Shortcuts for Easymotion
 nmap <leader>s <plug>(easymotion-s2)
