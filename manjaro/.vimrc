@@ -68,3 +68,7 @@ nmap <leader>b :Buffers<CR>
 " Shortcuts for Easymotion
 nmap <leader>s <plug>(easymotion-s2)
 
+" The Silver Searcher (https://geoff.greer.fm/ag/) provides command :Ag for searching recursively.
+" Installation for Manjaro: community/the_silver_searcher
+nmap <leader>a :Ag<CR>
+
