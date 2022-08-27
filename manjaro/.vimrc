@@ -38,13 +38,14 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 "" Default clipboard. Check https://vim.fandom.com/wiki/Accessing_the_system_clipboard
 "" If not working, on Gnome install vim-gnome; on Mint install vim-gtk3
-set clipboard=unnamedplus
+""set clipboard=unnamedplus
 
 "" Mappings - Normal Mode
 nmap <leader>q :q<CR>
 nmap <leader>j 10j
 nmap <leader>k 10k
 nmap <leader>; $a;<Esc>
+noremap <leader>tv :botright vnew <Bar> :terminal<cr> <C-w>j :q<CR>
 
 "" Mappings - Insert Mode
 imap jj <Esc>
@@ -56,10 +57,18 @@ nmap <leader>+ 10<C-w>>
 nmap <leader>- 10<C-w><
 nmap <leader>h <C-w>h
 nmap <leader>l <C-w>l
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-h> <C-w>h
+nmap <C-l> <C-w>l
 
 " Shortcuts for COC
 nmap <silent> gd <plug>(coc-definition)
+nmap <silent> gy <plug>(coc-type-definition)
 nmap <silent> gi <plug>(coc-implementation)
+nmap <silent> gr <plug>(coc-references)
+noremap <leader>w :CocSearch
+inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 " Shorcuts for ZFZ
 nmap <leader>f :Files<CR>
@@ -70,5 +79,8 @@ nmap <leader>s <plug>(easymotion-s2)
 
 " The Silver Searcher (https://geoff.greer.fm/ag/) provides command :Ag for searching recursively.
 " Installation for Manjaro: community/the_silver_searcher
+" On Mac, use brew
 nmap <leader>a :Ag<CR>
+
+
 
