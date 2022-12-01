@@ -63,3 +63,7 @@ Now let's install Alacritty
 sudo add-apt-repository ppa:mmstick76/alacritty
 sudo apt install alacritty
 
+If Alacritty fails with the ncurses programs, add this to the bottom of your .bashrc file:
+
+unset LD_LIBRARY_PATH
+
