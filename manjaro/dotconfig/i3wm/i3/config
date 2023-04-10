@@ -10,9 +10,9 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 # Alt key
-set $mod Mod1
+#set $mod Mod1
 # Windows key
-#set $mod Mod4
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -40,7 +40,7 @@ exec --no-startup-id nm-applet
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioPlay exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 bindsym XF86AudioNext exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
-bindsym XF86AudioPrevious exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
+bindsym XF86AudioPrev exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
@@ -65,12 +65,17 @@ bindsym $mod+Shift+u exec $HOME/.config/i3/lock.sh              # Lock Screen
 bindsym $mod+b exec google-chrome                               # Chrome
 bindsym $mod+Shift+b exec firefox                               # Chrome
 bindsym $mod+p exec phpstorm                                    # PHPStorm
+bindsym $mod+Shift+p exec /opt/Postman/Postman                  # Postman
 bindsym $mod+Shift+m exec rofi -show run                        # Rofi - All
 bindsym $mod+m exec rofi -show                                  # Rofi - Opened
 bindsym $mod+d exec flatpak run io.dbeaver.DBeaverCommunity     # DBeaver
+#bindsym $mod+d exec /opt/dbeaver/dbeaver                        # DBeaver
 bindsym $mod+ntilde exec redshift -O 3400                       # Redshift - Apply
+bindsym $mod+semicolon exec redshift -O 3400                    # Redshift - Apply (EN charset)
 bindsym $mod+Shift+ntilde exec redshift -x                      # Redshift - Discard
+bindsym $mod+Shift+semicolon exec redshift -x                   # Redshift - Discard (EN charset)
 bindsym $mod+y exec gnome-screenshot -a                         # Make screenshot
+#bindsym --release $mod+y exec scrot -s -e 'xclip -selection clipboard -target image/png -i $f'      # Make screenshot
 
 # LAUNCHING APPS - Manjaro laptop
 #bindsym $mod+b exec google-chrome-stable                        # Chrome
@@ -260,6 +265,7 @@ smart_gaps on
 exec_always feh --bg-fill /home/javi/Imágenes/Wallpapers/umbrella.jpg
 exec picom
 #exec xrandr --output DP-1 --right-of HDMI-2 --primary
+#exec xrandr --output eDP-1 --auto --mode 1680x1050 --right-of DP-3 # Work laptop
 
 # --------- Xrandr tricks
 # When you connect the monitor to the laptop, execute:
@@ -272,3 +278,5 @@ exec picom
 # workspace 1 output HDMI-0
 # workspace 2 output DVI-1-0
 
+# Force us layout, and change Caps Lock with Ctrl
+# setxkbmap -layout es -option ctrl:swapcaps
