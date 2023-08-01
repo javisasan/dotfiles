@@ -1,0 +1,60 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+let mapleader = " "
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Relative numbers when navigation
+set relativenumber
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+" Plugins --------
+set NERDTree
+
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+nmap <leader>gd :action GotoDefinition<CR>  "Default
+nmap <leader>gi :action GotoImplementation<CR>
+nmap <leader>gt :action GotoTest<CR>
+nmap <leader>gh :action Back<CR>
+nmap <leader>gl :action Forward<CR>
+
+" NERDTree - https://github.com/JetBrains/ideavim/wiki/NERDTree-support
+nmap <leader>nt :NERDTreeToggle<CR>
+nmap <leader>nf :NERDTreeFind<CR>
+
+nmap <leader>h :action PreviousTab<CR>
+nmap <leader>l :action NextTab<CR>
+
+"" Mappings - Normal Mode                                                                                          
+nmap <leader>q :q<CR>
+nmap <leader>j 10j
+nmap <leader>k 10k
+nmap <leader>; $a;<Esc>
+
+"" Mappings - Insert Mode
+imap jj <Esc>
+
+"" Default clipboard
+set clipboard+=unnamed
+
