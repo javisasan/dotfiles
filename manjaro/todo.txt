@@ -19,6 +19,8 @@ EndSection
 
 * Para el tema del brillo, hay que instalar
 sudo pacman -S brightnessctl
+Si no funciona sin usar sudo, ejecutar este comando y reiniciar sesion:
+sudo usermod -a -G video ${USER}
 
 *** Esta web va muy bien
 https://github.com/antoniosarosi/dotfiles/blob/master/README.es.md
