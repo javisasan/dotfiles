@@ -1,0 +1,92 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+# Change $SCRIPT_DIR to the location of your scripts!
+#command=$SCRIPT_DIR/$BLOCK_NAME
+separator=true
+separator_block_width=15
+align=center
+markup=pango
+color=#eeeeee
+
+# From version 1.5, establish borders
+#border=#ff0000   <= Can be overriden for each block
+#border_top=0
+#border_bottom=1
+#border_left=0
+#border_right=0
+
+[spotify]
+command=/home/javi/.config/i3blocks/spotify
+interval=5
+color=#00ff00
+
+[caps]
+command=/home/javi/.config/i3blocks/caps.sh
+interval=1
+color=#ffffff
+signal=2
+
+# Guess the weather hourly
+[weather]
+#command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
+command=/home/javi/.config/i3blocks/weather.sh
+interval=3600
+color=#A4C2F4
+
+[wallpaper]
+command=/home/javi/.config/i3blocks/change_wallpaper.py
+interval=120
+
+[ip]
+command=/home/javi/.config/i3blocks/network.sh
+interval=5
+color=#91E78B
+
+[volume]
+command=/home/javi/.config/i3blocks/volume
+label=♪
+interval=5
+signal=10
+color=#F79494
+
+[layout]
+command=/home/javi/.config/i3blocks/layout.sh
+interval=1
+color=#ffffff
+signal=2
+
+[battery]
+command=/home/javi/.config/i3blocks/batt.sh
+interval=60
+color=#00ff00
+
+# Update time every 5 seconds
+[time]
+command=date '+%a %Y.%m.%d %H:%M:%S'
+interval=5
+color=#eeeeee
+
