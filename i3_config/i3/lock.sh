@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Remove existing generated images
+rm $HOME/.config/i3/screen*.png
+
 # Needs i3lock installed
 icon="$HOME/Pictures/icon.png"
 #tmpbg='/tmp/screen.png'
